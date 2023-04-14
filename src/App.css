@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* gra */
+
+.xo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 300px;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.square:not(:last-child) {
+  border-right: none;
+}
+
+.board > div:not(:last-child) {
+  border-bottom: none;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: #eeeeee6c;
+}
+
+.active{
+  border: 2px solid gold;
+}
